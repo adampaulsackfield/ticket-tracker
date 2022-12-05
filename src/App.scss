@@ -1,0 +1,74 @@
+@use './assets/sass/variables' as *;
+
+@use './assets/sass/reset';
+
+body {
+	background-color: $color-background;
+	color: white;
+}
+
+.main {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+
+	&__header {
+		font-size: 3rem;
+		font-family: serif;
+		letter-spacing: 6px;
+		padding: 2rem 0;
+		color: $color-purple;
+
+		&--strikethrough {
+			opacity: 0.8;
+			text-decoration: line-through;
+		}
+	}
+
+	&__role-wrapper {
+		display: flex;
+		align-items: center;
+	}
+
+	&__filters {
+		width: 100%;
+		display: flex;
+		justify-content: space-around;
+		margin-bottom: 4rem;
+
+		&--text {
+			font-size: 1.4rem;
+			margin-right: 2rem;
+		}
+
+		&--input {
+			background-color: transparent;
+			border: none;
+			padding: 1rem;
+			border-bottom: solid 2px $color-purple;
+			color: $color-purple;
+			font-size: 1.4rem;
+
+			&:focus {
+				outline: none;
+			}
+		}
+
+		&--select {
+			appearance: none;
+			outline: none;
+			border: none;
+			padding: 1rem;
+			color: white;
+			background-color: $color-purple-darker;
+			border-radius: 20px;
+			cursor: pointer;
+			font-size: 1.4rem;
+
+			&-option {
+				padding: 1rem;
+				background-color: red;
+			}
+		}
+	}
+}

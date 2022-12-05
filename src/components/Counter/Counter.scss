@@ -1,0 +1,33 @@
+@use '../../assets/sass/variables' as *;
+
+.counter {
+	margin: 1rem 0;
+	padding: 1rem 0;
+	background-color: rgba($color-purple, 0.2);
+	border-radius: 20px;
+
+	&__header {
+		font-size: 1.2rem;
+	}
+
+	&__count {
+		color: $color-purple;
+		font-size: 2rem;
+		margin: 0.5rem 0;
+	}
+
+	&__buttons {
+		display: flex;
+		justify-content: space-around;
+
+		&--up,
+		&--down {
+			border: none;
+			background-color: transparent;
+			padding: 0.6rem;
+			border: solid 2px $color-purple;
+			border-radius: 20px;
+			color: white;
+		}
+	}
+}

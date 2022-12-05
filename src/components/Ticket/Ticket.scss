@@ -1,0 +1,25 @@
+@use '../../assets/sass/variables' as *;
+
+.ticket {
+	width: 80vw;
+	padding: 1rem;
+	border: solid 2px $color-purple;
+	border-radius: 5px;
+
+	&__header {
+		font-size: 2rem;
+		margin-bottom: 1rem;
+	}
+
+	&__text {
+		background-color: rgba($color-purple, 0.6);
+		padding: 0.2rem;
+		border-radius: 16px;
+	}
+}
+
+@media screen and (min-width: 768px) {
+	.ticket {
+		width: inherit;
+	}
+}
