@@ -1,8 +1,9 @@
 import { useState } from 'react';
 import './Counter.scss';
 
+let rand = Math.floor(Math.random());
 const Counter = () => {
-	const [count, setCount] = useState(0);
+	const [count, setCount] = useState(Math.floor(Math.random() * 20));
 
 	const handleSetCount = (index) => {
 		if (count === 0 && index === 'down') return;
@@ -12,7 +13,7 @@ const Counter = () => {
 
 	return (
 		<section className='counter'>
-			<h2 className='counter__header'>Counter</h2>
+			<h2 className='counter__header'>Completed</h2>
 
 			<p className='counter__count'>{count}</p>
 

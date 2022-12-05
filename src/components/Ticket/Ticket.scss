@@ -1,13 +1,13 @@
 @use '../../assets/sass/variables' as *;
 
 .ticket {
-	width: 80vw;
-	padding: 1rem;
+	width: 85vw;
+	padding: 0.6rem;
 	border: solid 2px $color-purple;
 	border-radius: 5px;
 
 	&__header {
-		font-size: 2rem;
+		font-size: 1.8rem;
 		margin-bottom: 1rem;
 	}
 
@@ -15,6 +15,12 @@
 		background-color: rgba($color-purple, 0.6);
 		padding: 0.2rem;
 		border-radius: 16px;
+	}
+}
+
+@media screen and (min-width: 550px) {
+	.ticket {
+		width: inherit;
 	}
 }
 
