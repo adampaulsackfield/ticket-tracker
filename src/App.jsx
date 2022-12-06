@@ -1,6 +1,6 @@
 import './App.scss';
 
-import TicketContainer from './containers/TicketContainer/TicketContainer';
+import EmployeesContainer from './containers/EmployeesContainer/EmployeesContainer';
 
 function App() {
 	return (
@@ -10,7 +10,7 @@ function App() {
 				Tracker
 			</h1>
 
-			<TicketContainer />
+			<EmployeesContainer />
 		</main>
 	);
 }

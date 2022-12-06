@@ -1,6 +1,6 @@
 @use '../../assets/sass/variables' as *;
 
-.tickets {
+.employees {
 	display: grid;
 	grid-template-columns: repeat(1, 1fr);
 	text-align: center;
@@ -8,19 +8,19 @@
 }
 
 @media screen and (min-width: 550px) {
-	.tickets {
+	.employees {
 		grid-template-columns: repeat(2, 1fr);
 	}
 }
 
 @media screen and (min-width: 768px) {
-	.tickets {
+	.employees {
 		grid-template-columns: repeat(3, 1fr);
 	}
 }
 
 @media screen and (min-width: 1200px) {
-	.tickets {
+	.employees {
 		grid-template-columns: repeat(5, 1fr);
 	}
 }

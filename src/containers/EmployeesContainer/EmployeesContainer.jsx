@@ -4,14 +4,14 @@ import { useState, useEffect } from 'react';
 import rawData from '../../assets/data';
 
 // Components
-import Ticket from '../../components/Ticket/Ticket';
+import Employee from '../../components/Employee/Employee';
 import Filters from '../../components/Filters/Filters';
 
 // Styles
-import './TicketContainer.scss';
+import './EmployeesContainer.scss';
 
 // Ticket Container - Houses state related to the data that is rendered. For example: searchTerms, selectedRoles and filtered data.
-const TicketContainer = () => {
+const EmployeesContainer = () => {
 	const [roles, setRoles] = useState([]);
 	const [searchTerm, setSearchTerm] = useState('');
 	const [selectedRole, setSelectedRole] = useState('');
@@ -54,14 +54,14 @@ const TicketContainer = () => {
 				handleRoleChange={handleRoleChange}
 			/>
 
-			{/* Map over the filtered data and render a Ticket component for each. */}
-			<section className='tickets'>
-				{filtered.map((member) => (
-					<Ticket key={member.id} member={member} />
+			{/* Map over the filtered data and render a Employee component for each. */}
+			<section className='employees'>
+				{filtered.map((employee) => (
+					<Employee key={employee.id} employee={employee} />
 				))}
 			</section>
 		</>
 	);
 };
 
-export default TicketContainer;
+export default EmployeesContainer;
