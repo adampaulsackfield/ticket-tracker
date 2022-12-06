@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/ticket-tracker/static/css/main.75d29cf0.css",
+    "main.js": "/ticket-tracker/static/js/main.edd1ecee.js",
+    "index.html": "/ticket-tracker/index.html",
+    "main.75d29cf0.css.map": "/ticket-tracker/static/css/main.75d29cf0.css.map",
+    "main.edd1ecee.js.map": "/ticket-tracker/static/js/main.edd1ecee.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.75d29cf0.css",
+    "static/js/main.edd1ecee.js"
+  ]
+}
