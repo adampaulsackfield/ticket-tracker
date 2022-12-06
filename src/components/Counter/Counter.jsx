@@ -5,10 +5,11 @@ import './Counter.scss';
 const Counter = ({ animate, setAnimate }) => {
 	const [count, setCount] = useState(Math.floor(Math.random() * 20));
 
-	const handleSetCount = (e) => {
-		if (count === 0 && e.target.value === 'down') return;
+	const handleSetCount = (direction) => {
+		if (count === 0 && direction === 'down') return;
 
-		e.target.value === 'up' ? setCount(count + 1) : setCount(count - 1);
+		direction === 'up' ? setCount(count + 1) : setCount(count - 1);
+
 		setAnimate(!animate);
 		setTimeout(() => {
 			setAnimate(false);
@@ -22,8 +23,8 @@ const Counter = ({ animate, setAnimate }) => {
 			<p className='counter__count'>{count}</p>
 
 			<div className='counter__buttons'>
-				<Button onClick={handleSetCount} value='down' />
-				<Button onClick={handleSetCount} value='up' />
+				<Button clickHandler={() => handleSetCount('down')} value='down' />
+				<Button clickHandler={() => handleSetCount('up')} value='up' />
 			</div>
 		</section>
 	);

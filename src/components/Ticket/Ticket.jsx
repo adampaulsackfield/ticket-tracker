@@ -9,7 +9,7 @@ const Ticket = ({ member }) => {
 	const [animate, setAnimate] = useState(false);
 
 	return (
-		<section className={animate ? 'ticket animate' : 'ticket'} key={member.id}>
+		<section className={`ticket ${animate && 'animate'}`} key={member.id}>
 			<div>
 				<h2 className='ticket__header'>{member.name}</h2>
 				<p className='ticket__text'>{member.role}</p>
