@@ -1,13 +1,18 @@
 import { useState } from 'react';
+import { FaAngleDown, FaAngleUp } from 'react-icons/fa';
 import './Counter.scss';
 
-const Counter = () => {
+const Counter = ({ animate, setAnimate }) => {
 	const [count, setCount] = useState(Math.floor(Math.random() * 20));
 
-	const handleSetCount = (index) => {
-		if (count === 0 && index === 'down') return;
+	const handleSetCount = (e) => {
+		if (count === 0 && e.target.value === 'down') return;
 
-		index === 'up' ? setCount(count + 1) : setCount(count - 1);
+		e.target.value === 'up' ? setCount(count + 1) : setCount(count - 1);
+		setAnimate(!animate);
+		setTimeout(() => {
+			setAnimate(false);
+		}, 400);
 	};
 
 	return (
@@ -18,17 +23,19 @@ const Counter = () => {
 
 			<div className='counter__buttons'>
 				<button
-					className='counter__buttons--up'
-					onClick={() => handleSetCount('up')}
+					className='counter__buttons--down'
+					onClick={handleSetCount}
+					value='down'
 				>
-					Increment
+					<FaAngleDown />
 				</button>
 
 				<button
-					className='counter__buttons--down'
-					onClick={() => handleSetCount('down')}
+					className='counter__buttons--up'
+					onClick={handleSetCount}
+					value='up'
 				>
-					Decrement
+					<FaAngleUp />
 				</button>
 			</div>
 		</section>

@@ -1,36 +1,30 @@
 @use '../../assets/sass/variables' as *;
 
 .ticket {
-	width: 85vw;
-	padding: 0.6rem;
-	border: solid 2px $color-purple;
-	border-radius: 5px;
+	display: flex;
+	flex-direction: column;
+	gap: 1rem;
+	padding: 0.8rem;
+	border: solid 2px $color-secondary;
+	border-radius: 12px;
+
+	backdrop-filter: blur(8px);
 
 	&__header {
 		font-size: 1.8rem;
-		margin-bottom: 1rem;
 	}
 
 	&__text {
-		background-color: rgba($color-purple, 0.6);
-		padding: 0.2rem;
-		border-radius: 16px;
-	}
-}
+		margin-top: 1rem;
+		background-color: rgba($color-secondary, 0.6);
+		padding: 0.4rem;
+		font-size: 0.75rem;
 
-@media screen and (min-width: 550px) {
-	.ticket {
-		width: inherit;
-	}
-}
-
-@media screen and (min-width: 768px) {
-	.ticket {
-		width: inherit;
+		border-radius: 12px;
 	}
 }
 
 .animate {
-	animation: tada; /* referring directly to the animation's @keyframe declaration */
-	animation-duration: 500ms; /* don't forget to set a duration! */
+	animation: jello; /* referring directly to the animation's @keyframe declaration */
+	animation-duration: 400ms; /* don't forget to set a duration! */
 }

@@ -1,74 +1,47 @@
 @use './assets/sass/variables' as *;
-
 @use './assets/sass/reset';
 
 body {
-	background-color: $color-background;
+	background-image: url('./assets/images/pexels-riccardo-bertolo-4245826.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+
 	color: white;
+}
+
+.container {
+	max-width: 100vw;
+	margin: 0 auto;
+	padding: 0 1rem;
 }
 
 .main {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
+	text-align: center;
+	gap: 2rem;
 
 	&__header {
-		font-size: 3rem;
+		font-size: 2rem;
 		font-family: serif;
-		letter-spacing: 6px;
-		padding: 2rem 0;
-		color: $color-purple;
+		letter-spacing: 10px;
+		color: $color-secondary;
+		padding-top: 2rem;
 
 		&--strikethrough {
-			opacity: 0.8;
+			opacity: 0.3;
 			text-decoration: line-through;
 		}
 	}
+}
 
-	&__role-wrapper {
-		display: flex;
-		align-items: center;
+@media screen and (min-width: 799px) {
+	.container {
+		padding: 0;
 	}
 
-	&__filters {
-		width: 100%;
-		display: flex;
-		justify-content: space-around;
-		margin-bottom: 4rem;
-
-		&--text {
-			font-size: 1.4rem;
-			margin-right: 2rem;
-		}
-
-		&--input {
-			background-color: transparent;
-			border: none;
-			padding: 1rem;
-			border-bottom: solid 2px $color-purple;
-			color: $color-purple;
-			font-size: 1.4rem;
-
-			&:focus {
-				outline: none;
-			}
-		}
-
-		&--select {
-			appearance: none;
-			outline: none;
-			border: none;
-			padding: 1rem;
-			color: white;
-			background-color: $color-purple-darker;
-			border-radius: 20px;
-			cursor: pointer;
-			font-size: 1.4rem;
-
-			&-option {
-				padding: 1rem;
-				background-color: red;
-			}
-		}
+	.main__header {
+		font-size: 4rem;
 	}
 }

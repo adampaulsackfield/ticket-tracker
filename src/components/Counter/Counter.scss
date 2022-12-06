@@ -1,9 +1,9 @@
 @use '../../assets/sass/variables' as *;
 
 .counter {
-	margin: 0.4rem 0;
-	padding: 1rem 0;
-	background-color: rgba($color-purple, 0.2);
+	padding: 2rem 0;
+	background-color: rgba($color-primary, 0.2);
+	border: solid 2px $color-primary;
 	border-radius: 20px;
 
 	&__header {
@@ -11,22 +11,24 @@
 	}
 
 	&__count {
-		color: $color-purple;
+		color: $color-secondary;
 		font-size: 2rem;
 		margin: 0.5rem 0;
 	}
 
 	&__buttons {
 		display: flex;
-		justify-content: space-around;
+		justify-content: center;
+		gap: 1rem;
 
 		&--up,
 		&--down {
 			border: none;
+			font-size: 2rem;
 			background-color: transparent;
 			padding: 0.6rem;
-			border: solid 2px $color-purple;
-			border-radius: 20px;
+			border: solid 2px $color-secondary;
+			border-radius: 12px;
 			color: white;
 		}
 	}
