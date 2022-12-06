@@ -20,16 +20,5 @@
 		display: flex;
 		justify-content: center;
 		gap: 1rem;
-
-		&--up,
-		&--down {
-			border: none;
-			font-size: 2rem;
-			background-color: transparent;
-			padding: 0.6rem;
-			border: solid 2px $color-secondary;
-			border-radius: 12px;
-			color: white;
-		}
 	}
 }

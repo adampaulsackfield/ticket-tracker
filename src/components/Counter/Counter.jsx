@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { FaAngleDown, FaAngleUp } from 'react-icons/fa';
+import Button from '../Button/Button';
 import './Counter.scss';
 
 const Counter = ({ animate, setAnimate }) => {
@@ -22,21 +22,8 @@ const Counter = ({ animate, setAnimate }) => {
 			<p className='counter__count'>{count}</p>
 
 			<div className='counter__buttons'>
-				<button
-					className='counter__buttons--down'
-					onClick={handleSetCount}
-					value='down'
-				>
-					<FaAngleDown />
-				</button>
-
-				<button
-					className='counter__buttons--up'
-					onClick={handleSetCount}
-					value='up'
-				>
-					<FaAngleUp />
-				</button>
+				<Button onClick={handleSetCount} value='down' />
+				<Button onClick={handleSetCount} value='up' />
 			</div>
 		</section>
 	);

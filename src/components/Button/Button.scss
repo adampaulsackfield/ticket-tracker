@@ -1,0 +1,11 @@
+@use '../../assets/sass/variables' as *;
+
+.button {
+	border: none;
+	font-size: 2rem;
+	background-color: transparent;
+	padding: 0.6rem;
+	border: solid 2px $color-secondary;
+	border-radius: 12px;
+	color: white;
+}
