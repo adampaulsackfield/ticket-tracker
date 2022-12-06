@@ -2,6 +2,7 @@
 @use './assets/sass/reset';
 
 body {
+	min-height: 100vh;
 	background-image: url('./assets/images/pexels-riccardo-bertolo-4245826.jpg');
 	background-repeat: no-repeat;
 	background-size: cover;

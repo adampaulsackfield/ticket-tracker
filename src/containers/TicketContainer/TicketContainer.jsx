@@ -22,10 +22,9 @@ const TicketContainer = () => {
 	};
 
 	useEffect(() => {
-		const data = rawData.filter((employee) => {
+		const data = rawData.filter(({ role, name }) => {
 			return (
-				employee.role.includes(selectedRole) &&
-				employee.name.toLowerCase().includes(searchTerm)
+				role.includes(selectedRole) && name.toLowerCase().includes(searchTerm)
 			);
 		});
 
@@ -34,7 +33,7 @@ const TicketContainer = () => {
 
 	useEffect(() => {
 		const uniqueRoles = new Set();
-		rawData.map((employee) => uniqueRoles.add(employee.role));
+		rawData.map(({ role }) => uniqueRoles.add(role));
 		setRoles(Array.from(uniqueRoles));
 	}, []);
 

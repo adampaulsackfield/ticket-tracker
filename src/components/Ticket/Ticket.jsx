@@ -5,14 +5,14 @@ import Counter from '../Counter/Counter';
 import './Ticket.scss';
 import 'animate.css';
 
-const Ticket = ({ member }) => {
+const Ticket = ({ member: { id, name, role } }) => {
 	const [animate, setAnimate] = useState(false);
 
 	return (
-		<section className={`ticket ${animate && 'animate'}`} key={member.id}>
+		<section className={`ticket ${animate && 'animate'}`} key={id}>
 			<div>
-				<h2 className='ticket__header'>{member.name}</h2>
-				<p className='ticket__text'>{member.role}</p>
+				<h2 className='ticket__header'>{name}</h2>
+				<p className='ticket__text'>{role}</p>
 			</div>
 
 			<Counter animate={animate} setAnimate={setAnimate} />
