@@ -1,37 +1,39 @@
 import './App.scss';
 import Tickets from './components/Tickets/Tickets';
 
-import data from './assets/data';
+import rawData from './assets/data';
 import { useState, useEffect } from 'react';
 
 function App() {
-	const [searchTerm, setSearchTerm] = useState(null);
-	const [employeeData, setEmployeeData] = useState(data);
-	const [filtered, setFiltered] = useState([]);
 	const [roles, setRoles] = useState([]);
+	const [searchTerm, setSearchTerm] = useState('');
+	const [selectedRole, setSelectedRole] = useState('');
+	const [filtered, setFiltered] = useState(rawData);
 
 	const handleChange = (e) => {
 		setSearchTerm(e.target.value.toLowerCase());
-		const filtered = employeeData.filter((employee) => {
-			const employeeNameLower = employee.name.toLowerCase();
-
-			return employeeNameLower.includes(searchTerm) && employee;
-		});
-		setFiltered(filtered);
 	};
 
 	const handleRoleChange = (e) => {
-		const filtered = employeeData.filter(
-			(employee) => employee.role === e.target.value
-		);
-		setFiltered(filtered);
+		setSelectedRole(e.target.value);
 	};
 
 	useEffect(() => {
+		const data = rawData.filter((employee) => {
+			return (
+				employee.role.includes(selectedRole) &&
+				employee.name.toLowerCase().includes(searchTerm)
+			);
+		});
+
+		setFiltered(data);
+	}, [selectedRole, searchTerm]);
+
+	useEffect(() => {
 		const uniqueRoles = new Set();
-		employeeData.map((employee) => uniqueRoles.add(employee.role));
+		rawData.map((employee) => uniqueRoles.add(employee.role));
 		setRoles(Array.from(uniqueRoles));
-	}, [employeeData]);
+	}, []);
 
 	return (
 		<main className='main'>
@@ -50,8 +52,13 @@ function App() {
 
 				<div className='main__role-wrapper'>
 					<p className='main__filters--text'>Role: </p>
-					<select className='main__filters--select' onChange={handleRoleChange}>
-						<option className='main__filters--select-option' value='all'>
+
+					<select
+						className='main__filters--select'
+						onChange={handleRoleChange}
+						defaultValue='Employee Category'
+					>
+						<option className='main__filters--select-option' value=''>
 							All
 						</option>
 						{roles.map((role) => {
@@ -65,7 +72,7 @@ function App() {
 				</div>
 			</section>
 
-			<Tickets team={filtered.length ? filtered : employeeData} />
+			<Tickets team={filtered} />
 		</main>
 	);
 }

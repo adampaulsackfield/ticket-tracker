@@ -1,7 +1,6 @@
 import { useState } from 'react';
 import './Counter.scss';
 
-let rand = Math.floor(Math.random());
 const Counter = () => {
 	const [count, setCount] = useState(Math.floor(Math.random() * 20));
 

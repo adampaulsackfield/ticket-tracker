@@ -29,3 +29,8 @@
 		width: inherit;
 	}
 }
+
+.animate {
+	animation: tada; /* referring directly to the animation's @keyframe declaration */
+	animation-duration: 500ms; /* don't forget to set a duration! */
+}
