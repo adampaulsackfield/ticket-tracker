@@ -1,5 +1,6 @@
 import './Filters.scss';
 
+// Filters - Immediately destructure all the keys we need. Attach the handlers to their respective inputs.
 const Filters = ({ handleChange, roles, handleRoleChange }) => {
 	return (
 		<section className='filters'>
@@ -30,6 +31,7 @@ const Filters = ({ handleChange, roles, handleRoleChange }) => {
 					<option className='filters__select-option' value=''>
 						All
 					</option>
+					{/* Here is where we map over the uniqueRoles which have come down from the ticketContainer. */}
 					{roles.map((role) => {
 						return (
 							<option key={role} value={role}>
