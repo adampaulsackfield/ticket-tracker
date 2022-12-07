@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/ticket-tracker/static/css/main.0260e8c4.css",
+    "main.css": "/ticket-tracker/static/css/main.fc4409b8.css",
     "main.js": "/ticket-tracker/static/js/main.2c99319d.js",
-    "static/media/pexels-riccardo-bertolo-4245826.jpg": "/ticket-tracker/static/media/pexels-riccardo-bertolo-4245826.d60fa1d38151558b35e2.jpg",
+    "static/media/christmas-black.webp": "/ticket-tracker/static/media/christmas-black.555c8cde47c8f2c2c934.webp",
     "index.html": "/ticket-tracker/index.html",
-    "main.0260e8c4.css.map": "/ticket-tracker/static/css/main.0260e8c4.css.map",
+    "main.fc4409b8.css.map": "/ticket-tracker/static/css/main.fc4409b8.css.map",
     "main.2c99319d.js.map": "/ticket-tracker/static/js/main.2c99319d.js.map"
   },
   "entrypoints": [
-    "static/css/main.0260e8c4.css",
+    "static/css/main.fc4409b8.css",
     "static/js/main.2c99319d.js"
   ]
 }
